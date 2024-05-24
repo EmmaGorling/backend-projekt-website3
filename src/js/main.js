@@ -13,7 +13,6 @@ async function getMenu() {
     try {
         let result = await fetch(url);
         let menu = await result.json();
-        console.log(menu);
         categorize(menu);
     } catch (error) {
         const errorDiv = document.getElementById('menu-error');

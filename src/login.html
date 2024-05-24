@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="./js/login.js"></script>
 </head>
 <body>
     <header>
-
+        <a href="index.html"><img src="images/logo.svg" alt="Logga"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h1>Logga in</h1>
+        <form action="" id="loginForm">
+            <label for="username">Användarnamn:</label>
+            <input type="text" name="username" id="username">
+            <br>
+            <label for="password">Lösenord:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <div id="errorMsg">    
+            </div>
+            <input type="submit" value="Logga in">
+            
+        </form>
     </main>
     <footer>
 
