@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addForm.addEventListener('submit', (event) => {
         event.preventDefault();
         addDish();
-    })
+    });
 });
 
 // Get menu
@@ -54,7 +54,7 @@ function writeMenu(menu) {
             const changeBtn = document.createElement('a');
             changeBtn.textContent = 'Ändra';
             changeBtn.classList = 'changeBtn';
-            changeBtn.href = '#editDish';
+            changeBtn.href = '#edit-section';
             li.appendChild(changeBtn);
             changeBtn.addEventListener('click', () => {
                 editDish(dish);
@@ -116,9 +116,68 @@ async function addDish() {
     }
 }
 
-// Edit dish
+// Edit dish (set values and get form)
 function editDish(dish) {
-    console.log(dish);
+    // Get the inputs
+    let dishName = document.getElementById('editName');
+    let dishIngredients = document.getElementById('editIngredients');
+    let dishPrice = document.getElementById('editPrice');
+    let dishCategory = document.getElementById('editCategory');
+    // Set values
+    dishName.value = dish.name;
+    dishIngredients.value = dish.ingredients;
+    dishPrice.value = dish.price;
+    dishCategory.value = dish.category;
+    // Get edit form
+    let editForm = document.getElementById('editDish');
+    editForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        saveEdits(dish._id);
+    });
+}
+
+// Save edits
+async function saveEdits(id) {
+    // Get the inputs
+    let dishName = document.getElementById('editName');
+    let dishIngredients = document.getElementById('editIngredients');
+    let dishPrice = document.getElementById('editPrice');
+    let dishCategory = document.getElementById('editCategory');
+    // Message div
+    let msgDiv = document.getElementById('editError')
+    // Check input values
+    if(dishName.value.length < 1 || dishIngredients.value.length < 1 || dishPrice.value.length < 1) {
+        msgDiv.innerHTML = 'Alla fält behöver fyllas i';
+    } else {
+        //Create dish from inputs
+        let dish = {
+            name: dishName.value,
+            ingredients: dishIngredients.value,
+            price: dishPrice.value,
+            category: dishCategory.value
+        }
+        // Update dish in database
+        try {
+            const response = await fetch(url + '/' + id, {
+                method:"PUT",
+                headers: {
+                    "authorization": `Bearer: ${localStorage.getItem('token')}`,
+                    "Content-type": "Application/json"
+                },
+                body: JSON.stringify(dish)
+            });
+            const data = await response.json();
+            console.log(data);
+            // Clear inputs
+            dishName.value = '';
+            dishIngredients.value = '';
+            dishPrice.value = '';
+            getMenu();
+            window.location.href = '#currentDishes';
+        } catch (error) {
+            msgDiv.innerHTML = 'Det verkar som att något har gått fel..'
+        }    
+    }
 }
 
 // Delete a dish

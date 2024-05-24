@@ -48,12 +48,34 @@
         <div id="currentDishes">
             <h2>Befintliga maträtter</h2>
             <ul id="dishes">
-
+                <!-- Writing for dishes -->
             </ul>
         </div>
-        <div id="editDish">
+        <div id="edit-section">
             <h2>Redigera maträtt</h2>
-
+            <form action="" id="editDish">
+                <label for="editName">Maträtt:</label>
+                <input type="text" name="editName" id="editName">
+                <br>
+                <label for="editIngredients">Ingredienser:</label>
+                <textarea name="editIngredients" id="editIngredients" cols="30" rows="10"></textarea>
+                <br>
+                <label for="editPrice">Pris:</label>
+                <input type="number" name="editPrice" id="editPrice">
+                <br>
+                <label for="editCategory">Kategori:</label>
+                <select name="editCategory" id="editCategory">
+                    <option value="mix">Mix</option>
+                    <option value="nigiri">Nigiri</option>
+                    <option value="maki">Maki</option>
+                    <option value="bowls">Bowls</option>
+                    <option value="sides">Sides/Smårätter</option>
+                </select>
+                <div id="editError">
+                </div>
+                <input type="submit" id="saveEdit" value="Spara ändringar">
+                <input type="reset" name="cancel" id="cancel" value="Avbryt">
+            </form>
         </div>
     </main>
     <footer>
