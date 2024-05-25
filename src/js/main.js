@@ -15,8 +15,7 @@ async function getMenu() {
         let menu = await result.json();
         categorize(menu);
     } catch (error) {
-        const errorDiv = document.getElementById('menu-error');
-        errorDiv.innerHTML = `<p>${error}</p>`;
+        console.log(error);
     }
 }
 

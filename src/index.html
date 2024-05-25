@@ -15,14 +15,16 @@
 </head>
 <body>
     <header>
-        <h1><a href="#home-section">LINKÖPINGS SUSHI</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#home-section">Hem</a></li>
-                <li><a href="#menu-section">Meny</a></li>
-                <li><a href="#about-section">Om oss</a></li>
-            </ul>
-        </nav>
+        <div class="content">
+            <h1><a href="#home-section">LINKÖPINGS SUSHI</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home-section">Hem</a></li>
+                    <li><a href="#menu-section">Meny</a></li>
+                    <li><a href="#about-section">Om oss</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main id="index">
         <div id="home-section">
@@ -41,37 +43,36 @@
 
         <div id="menu-section">
             <h2>Meny</h2>
-            <div id="menu-error">
+            <div id="menu-writing">
+                <div class="category">
+                    <h3>Mix Sushi</h3>
+                    <ul id="mix">
+                    </ul>
+                </div>
 
-            </div>
-            <div class="category">
-                <h3>Mix Sushi</h3>
-                <ul id="mix">
-                </ul>
-            </div>
+                <div class="category">
+                    <h3>Nigiri Sushi</h3>
+                    <ul id="nigiri">
+                    </ul>
+                </div>
 
-            <div class="category">
-                <h3>Nigiri Sushi</h3>
-                <ul id="nigiri">
-                </ul>
-            </div>
+                <div class="category">
+                    <h3>Maki Sushi</h3>
+                    <ul id="maki">
+                    </ul>
+                </div>
 
-            <div class="category">
-                <h3>Maki Sushi</h3>
-                <ul id="maki">
-                </ul>
-            </div>
+                <div class="category">
+                    <h3>Bowls</h3>
+                    <ul id="bowls">
+                    </ul>
+                </div>
 
-            <div class="category">
-                <h3>Bowls</h3>
-                <ul id="bowls">
-                </ul>
-            </div>
-
-            <div class="category">
-                <h3>Smårätter</h3>
-                <ul id="sides">
-                </ul>
+                <div class="category">
+                    <h3>Smårätter</h3>
+                    <ul id="sides">
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="about-section">
@@ -91,30 +92,32 @@
         </div>
     </main>
     <footer>
-        <div id="openhours">
-            <h4>Öppettider</h4>
-            <ul>
-                <li><b>Mån - Tors</b> 11:00 - 20:00</li>
-                <li><b>Fre - Lör:</b> 11:00 - 22:00</li>
-                <li><b>Söndagar:</b> 12:00 - 18:00</li>
-            </ul>
-        </div>
-        <div id="contact">
-            <h4>Kontakt</h4>
-            <ul>
-                <li><i class="fa-solid fa-location-dot"></i> Storgatan 54, 582 23 Linköping</li>
-                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:example@example.com">Maila oss!</a></li>
-                <li><i class="fa-solid fa-phone"></i> <a href="tel:013123456">013-12 34 56</a></li>
-            </ul>
-        </div>
-        <div id="startlink">
-            <h4><a href="#home-section"><i class="fa-solid fa-house"></i>Tillbaka till toppen av sidan</a></h4>
-        </div>
-        <div id="admin">
-            <h4>Admin</h4>
-            <ul>
-                <li><a href="/login"><i class="fa-solid fa-lock"></i>Logga in</a></li>
-            </ul>
+        <div class="content">
+            <div id="openhours">
+                <h4>Öppettider</h4>
+                <ul>
+                    <li><b>Mån - Tors</b> 11:00 - 20:00</li>
+                    <li><b>Fre - Lör:</b> 11:00 - 22:00</li>
+                    <li><b>Söndagar:</b> 12:00 - 18:00</li>
+                </ul>
+            </div>
+            <div id="contact">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Storgatan 54, 582 23 Linköping</li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:example@example.com">Maila oss!</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:013123456">013-12 34 56</a></li>
+                </ul>
+            </div>
+            <div id="startlink">
+                <h4><a href="#home-section"><i class="fa-solid fa-house"></i>Tillbaka till toppen av sidan</a></h4>
+            </div>
+            <div id="admin">
+                <h4>Admin</h4>
+                <ul>
+                    <li><a href="/login"><i class="fa-solid fa-lock"></i>Logga in</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

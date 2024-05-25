@@ -1,8 +1,12 @@
 @import './variables';
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    .content {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     h1 {
         margin-top: 20px;
         margin-left: 10px;
@@ -35,12 +39,17 @@ header {
 }
 
 footer {
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     div {
         margin: 0 auto;
         width: 80%;
     }
     ul {
         list-style: none;
+        line-height: 1.6em;
     }
     a {
         padding: 5px 0;
@@ -48,6 +57,34 @@ footer {
         color: white;
         i{
             padding-right: 5px;
+        }
+    }
+}
+
+@media (min-width:700px) {
+    header {
+        h1 {
+            font-size: xx-large;
+            margin-left: 30px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            a {
+                font-size: 1.4em;
+            }
+        }
+        
+    }
+    footer {
+        .content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        }
+        #openhours, #contact, #startlink, #admin {
+            width: 60%;
+            margin: 0 auto;
+            justify-self: center;
         }
     }
 }
