@@ -3,6 +3,10 @@
 const url = 'https://backend-projekt-webservice.onrender.com/admin/login';
 
 document.addEventListener('DOMContentLoaded', () => {
+    let token = localStorage.getItem('token');
+    if(token) {
+        window.location.href = 'edit.html'
+    }
     const longinForm = document.getElementById('loginForm');
     longinForm.addEventListener('submit', (event) => {
         event.preventDefault();

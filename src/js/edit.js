@@ -4,6 +4,10 @@ const url = 'https://backend-projekt-webservice.onrender.com/menu/dishes';
 
 // DOM-content loaded
 document.addEventListener('DOMContentLoaded', () => {
+    let token = localStorage.getItem('token');
+    if(!token) {
+        window.location.href = 'login.html';
+    }
     // Get current menu
     getMenu();
     // Get logut button and add event-listener
@@ -19,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addDish();
     });
 });
+
 
 // Get menu
 async function getMenu() {
@@ -167,7 +172,6 @@ async function saveEdits(id) {
                 body: JSON.stringify(dish)
             });
             const data = await response.json();
-            console.log(data);
             // Clear inputs
             dishName.value = '';
             dishIngredients.value = '';

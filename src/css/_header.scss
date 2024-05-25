@@ -1,6 +1,35 @@
+@import './variables';
+
 header {
-    img {
-        width: 20%;
-        max-width: 250px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    h1 {
+        margin-top: 20px;
+        margin-left: 10px;
+        text-align: center;
+        align-self: center;
+        font-family: "Reggae One", system-ui;
+        font-size: x-large;
+        a {
+            text-decoration: none;
+            color: $red;
+        }
+    }
+    
+    nav {
+        align-self: center;
+        justify-self: end;
+        align-self:center;
+        margin-right: 30px;
+        ul {
+            list-style: none;
+        }
+        a {
+            display: block;
+            padding: 5px 0;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+        }
     }
 }
