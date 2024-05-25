@@ -1,0 +1,21 @@
+@import './variables';
+
+// Logout button
+#logout {
+    grid-column: 2/3;
+    width: 12ch;
+    justify-self: end;
+    margin-right: 20px;
+    background-color: $red;
+    border: none;
+    border-radius: 5px;
+}
+
+#edit {
+    h2 {
+        color: $red;
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+}

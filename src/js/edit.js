@@ -50,7 +50,7 @@ function writeMenu(menu) {
             let li = document.createElement('li');
             li.classList = 'dish';
             li.innerHTML = `
-                <h3>${dish.name}</h3>
+                <h4>${dish.name}</h4>
                 <p>${dish.price} kr</p>
                 <p>${dish.ingredients}</p>
                 <p>Kategori: ${dish.category}</p>`;

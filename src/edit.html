@@ -14,18 +14,20 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">LINKÖPINGS SUSHI</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-            </ul>
-        </nav>
-        <button id="logout">Logga ut</button>
+        <div class="content">
+            <h1><a href="index.html">LINKÖPINGS SUSHI</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                </ul>
+            </nav>
+            <button id="logout">Logga ut</button>
+        </div>
     </header>
     <main id="edit">
-        <h1>Redigera meny</h1>
+        <h2>Redigera meny</h2>
         <div id="addDish">
-            <h2>Lägg till maträtt</h2>
+            <h3>Lägg till maträtt</h3>
             <form action="addDish">
                 <label for="addName">Maträtt:</label>
                 <input type="text" name="addName" id="addName">
@@ -50,13 +52,13 @@
             </form>
         </div>
         <div id="currentDishes">
-            <h2>Befintliga maträtter</h2>
+            <h3>Befintliga maträtter</h3>
             <ul id="dishes">
                 <!-- Writing for dishes -->
             </ul>
         </div>
         <div id="edit-section">
-            <h2>Redigera maträtt</h2>
+            <h3>Redigera maträtt</h3>
             <form action="" id="editDish">
                 <label for="editName">Maträtt:</label>
                 <input type="text" name="editName" id="editName">
