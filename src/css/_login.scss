@@ -1,0 +1,15 @@
+@import './variables';
+
+#login {
+    text-align: center;
+    label, input {
+        margin:10px auto;
+    }
+    #loginBtn {
+        font-weight: 600;
+        background-color: $red;
+        border: none;
+        border-radius: 5%;
+        line-height: 1.6em;
+    }
+}
