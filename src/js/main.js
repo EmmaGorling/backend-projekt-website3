@@ -50,7 +50,7 @@ function writeMenu(dishes, ul) {
             li.innerHTML = `
                 <h4>${dish.name}</h4>
                 <span class='price'>${dish.price} kr</span>
-                <span class='ingerients'>${dish.ingredients}</span>
+                <span class='ingredients'>${dish.ingredients}</span>
             `;
             ul.appendChild(li);
         });

@@ -8,7 +8,7 @@ header {
         margin-left: 10px;
         text-align: center;
         align-self: center;
-        font-family: "Reggae One", system-ui;
+        font-family: $reggae;
         font-size: x-large;
         a {
             text-decoration: none;
@@ -30,6 +30,24 @@ header {
             text-decoration: none;
             color: white;
             font-weight: 700;
+        }
+    }
+}
+
+footer {
+    div {
+        margin: 0 auto;
+        width: 80%;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        padding: 5px 0;
+        text-decoration: none;
+        color: white;
+        i{
+            padding-right: 5px;
         }
     }
 }

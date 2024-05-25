@@ -5,6 +5,7 @@ body {
     grid-template-rows: auto 1fr auto;
     margin: 0;
     background-color: $dark-grey;
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
+    color: $white;
 }
 
