@@ -30,15 +30,19 @@
             <h3>Lägg till maträtt</h3>
             <form action="addDish">
                 <label for="addName">Maträtt:</label>
+                <br>
                 <input type="text" name="addName" id="addName">
                 <br>
                 <label for="addIngredients">Ingredienser:</label>
+                <br>
                 <textarea name="addIngredients" id="addIngredients" cols="30" rows="10"></textarea>
                 <br>
                 <label for="addPrice">Pris:</label>
+                <br>
                 <input type="number" name="addPrice" id="addPrice">
                 <br>
                 <label for="addCategory">Kategori:</label>
+                <br>
                 <select name="addCategory" id="addCategory">
                     <option value="mix">Mix</option>
                     <option value="nigiri">Nigiri</option>
@@ -48,7 +52,7 @@
                 </select>
                 <div id="addError">
                 </div>
-                <input type="submit" value="Lägg till">
+                <input type="submit" value="Lägg till" id="addBtn">
             </form>
         </div>
         <div id="currentDishes">
@@ -61,15 +65,19 @@
             <h3>Redigera maträtt</h3>
             <form action="" id="editDish">
                 <label for="editName">Maträtt:</label>
+                <br>
                 <input type="text" name="editName" id="editName">
                 <br>
                 <label for="editIngredients">Ingredienser:</label>
+                <br>
                 <textarea name="editIngredients" id="editIngredients" cols="30" rows="10"></textarea>
                 <br>
                 <label for="editPrice">Pris:</label>
+                <br>
                 <input type="number" name="editPrice" id="editPrice">
                 <br>
                 <label for="editCategory">Kategori:</label>
+                <br>
                 <select name="editCategory" id="editCategory">
                     <option value="mix">Mix</option>
                     <option value="nigiri">Nigiri</option>
@@ -85,7 +93,7 @@
         </div>
     </main>
     <footer>
-        <div id="contact">
+        <div id="contact-editSide">
             <h4>Kontakta utvecklare</h4>
             <ul>
                 <li><i class="fa-solid fa-envelope"></i> <a href="mailto:example@example.com">Maila Emma</a></li>
