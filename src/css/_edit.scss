@@ -13,7 +13,7 @@
 
 #edit {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: $center;
     h2 {
         color: $red;
         text-decoration: underline;
@@ -61,7 +61,7 @@
 // Contact info footer
 #contact-editSide {
     width: fit-content;
-    margin: 0 auto;
+    margin: $center;
 }
 
 @media (min-width: 700px) {

@@ -3,7 +3,7 @@
 #index {
     width: 100%;
     max-width: 1920;
-    margin: 0 auto;
+    margin: $center;
     // Backround image
     background-image: url('../images/sushi.jpg');
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@
         display: grid;
         grid-template-columns: 50% 50%;
         max-width: 1300px;
-        margin: 0 auto;
+        margin: $center;
         .category {
             width: 90%;
             h3 {

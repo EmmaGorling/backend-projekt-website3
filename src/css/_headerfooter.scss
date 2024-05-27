@@ -5,7 +5,7 @@ header {
         display: grid;
         grid-template-columns: 50% 50%;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: $center;
     }
     h1 {
         margin-top: 20px;
@@ -41,10 +41,10 @@ header {
 footer {
     .content {
         max-width: 1200px;
-        margin: 0 auto;
+        margin: $center;
     }
     div {
-        margin: 0 auto;
+        margin: $center;
         width: 80%;
     }
     ul {
@@ -83,7 +83,7 @@ footer {
         }
         #openhours, #contact, #startlink, #admin {
             width: 60%;
-            margin: 0 auto;
+            margin: $center;
             justify-self: center;
         }
     }
