@@ -25,10 +25,10 @@
         </div>
     </header>
     <main id="edit">
-        <h2>Redigera meny</h2>
+        <h1>Redigera meny</h1>
         <div id="addDish">
-            <h3>Lägg till maträtt</h3>
-            <form action="addDish">
+            <h2>Lägg till maträtt</h2>
+            <form action="" id="addForm">
                 <label for="addName">Maträtt:</label>
                 <br>
                 <input type="text" name="addName" id="addName">
@@ -56,13 +56,39 @@
             </form>
         </div>
         <div id="currentDishes">
-            <h3>Befintliga maträtter</h3>
-            <ul id="dishes">
-                <!-- Writing for dishes -->
-            </ul>
-        </div>
+            <h2>Befintliga maträtter</h2>
+            <div class="category">
+                <h3>Mix Sushi</h3>
+                <ul id="mix">
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Nigiri Sushi</h3>
+                <ul id="nigiri">
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Maki Sushi</h3>
+                <ul id="maki">
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Bowls</h3>
+                <ul id="bowls">
+                </ul>
+            </div>
+
+            <div class="category">
+                <h3>Smårätter</h3>
+                <ul id="sides">
+                </ul>
+            </div>
+        </div> 
         <div id="edit-section">
-            <h3>Redigera maträtt</h3>
+            <h2>Redigera maträtt</h2>
             <form action="" id="editDish">
                 <label for="editName">Maträtt:</label>
                 <br>

@@ -30,31 +30,45 @@ async function getMenu() {
     try {
         let result = await fetch(url);
         let menu = await result.json();
-        writeMenu(menu);
+        categorize(menu);
     } catch (error) {
         const errorDiv = document.getElementById('menu-error');
         errorDiv.innerHTML = `<p>${error}</p>`;
     }
 }
 
-// Write menu
-function writeMenu(menu) {
-    let dishesUl = document.getElementById('dishes');
-    dishesUl.innerHTML = '';
-    // Check length of menu
-    if(menu.length < 1) {
-        dishesUl.innerHTML = '<li>Det finns inga matätter i menyn</li>';
-    } else {
-        menu.forEach(dish => {
-            // Create li element and add innerhtml
-            let li = document.createElement('li');
-            li.classList = 'dish';
+// Categorize dishes 
+function categorize(menu) {
+    // Get dishes by category
+    const mixes = menu.filter(dish => dish.category.includes('mix'));
+    const nigiri = menu.filter(dish => dish.category.includes('nigiri'));
+    const maki = menu.filter(dish => dish.category.includes('maki'));
+    const bowls = menu.filter(dish => dish.category.includes('bowls'));
+    const sides = menu.filter(dish => dish.category.includes('sides'));
+    
+    // Get Ul's from document
+    const mixUl = document.getElementById('mix');
+    const nigiriUl = document.getElementById('nigiri');
+    const makiUl = document.getElementById('maki');
+    const bowlsUl = document.getElementById('bowls');
+    const sidesUl = document.getElementById('sides');
+
+    writeMenu(mixes, mixUl);
+    writeMenu(nigiri, nigiriUl);
+    writeMenu(maki, makiUl);
+    writeMenu(bowls, bowlsUl);
+    writeMenu(sides, sidesUl);
+}
+
+function writeMenu(dishes, ul) {
+    if(dishes.length > 0) {
+        dishes.forEach(dish => {
+            const li = document.createElement('li');
             li.innerHTML = `
                 <h4>${dish.name}</h4>
-                <p>${dish.price} kr</p>
-                <p>${dish.ingredients}</p>
-                <p>Kategori: ${dish.category}</p>`;
-            dishesUl.appendChild(li);
+                <span class='price'>${dish.price} kr</span>
+                <span class='ingredients'>${dish.ingredients}</span>
+            `;
             // Change-button
             const changeBtn = document.createElement('a');
             changeBtn.textContent = 'Ändra';
@@ -72,8 +86,13 @@ function writeMenu(menu) {
             deleteBtn.addEventListener('click', () => {
                 deleteDish(dish._id);
             });
+            ul.appendChild(li);
         });
-        
+    } else {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <h4 class='noDish'>Finns inga rätter i denna kategorin</h4>`;
+        ul.appendChild(li);
     }
 }
 
