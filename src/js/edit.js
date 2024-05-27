@@ -113,6 +113,7 @@ async function addDish() {
             dishName.value = '';
             dishIngredients.value = '';
             dishPrice.value = '';
+            msgDiv.innerHTML = '';
 
             getMenu();
         } catch (error) {
@@ -176,6 +177,7 @@ async function saveEdits(id) {
             dishName.value = '';
             dishIngredients.value = '';
             dishPrice.value = '';
+            msgDiv.innerHTML = '';
             getMenu();
             window.location.href = '#currentDishes';
         } catch (error) {
