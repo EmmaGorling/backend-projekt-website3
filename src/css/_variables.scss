@@ -10,3 +10,10 @@ $reggae: "Reggae One", system-ui;
 $roboto-condensed: "Roboto Condensed", sans-serif;
 
 $center: 0 auto;
+
+
+// Mixins
+@mixin button {
+    border: none;
+    border-radius: 5px;
+}

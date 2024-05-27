@@ -27,20 +27,17 @@
         .delete  {
             margin-right: 20px;
             background-color: $red;
-            border: none;
-            border-radius: 5px;
+            @include button;
             
         }
         #cancel {
             margin-right: 20px;
             background-color: $red;
-            border: none;
-            border-radius: 5px;
+            @include button;
             width: 12ch;
         }
         #saveEdit, .changeBtn, #addBtn {
-            border: none;
-            border-radius: 5px;
+            @include button;
             background-color: $white;
         }
         .changeBtn {
