@@ -3,7 +3,7 @@
 header {
     .content {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 50% 50%;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -24,7 +24,7 @@ header {
         align-self: center;
         justify-self: end;
         align-self:center;
-        margin-right: 30px;
+        margin-right: 20px;
         ul {
             list-style: none;
         }
