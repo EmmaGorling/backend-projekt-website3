@@ -8,8 +8,7 @@
     #loginBtn {
         font-weight: 600;
         background-color: $red;
-        border: none;
-        border-radius: 5px;
+        @include button;
         line-height: 1.6em;
     }
 }
