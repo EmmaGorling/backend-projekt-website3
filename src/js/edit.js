@@ -61,6 +61,7 @@ function categorize(menu) {
 }
 
 function writeMenu(dishes, ul) {
+    ul.innerHTML = '';
     if(dishes.length > 0) {
         dishes.forEach(dish => {
             const li = document.createElement('li');
